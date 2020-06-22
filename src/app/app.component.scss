@@ -1,0 +1,104 @@
+.nav-item{
+    margin-left:10px;
+}
+.atualizacao{
+    font-size: 12px;
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+}
+.apresentacao{
+    font-size: 14px;
+    text-align: left;
+    font-style: italic;
+}
+.conteudo{
+    margin: auto;
+    padding: 10px;
+}
+.sinal-semana{
+    padding: 50px;
+    height: 100%;
+}
+.sinal-semana-alerta {
+    background-color: #fefbd8;
+    color: rgb(124, 98, 98);
+} 
+.sinal-semana-alerta-maximo {
+    background-color: #ffff00;
+    color: rgb(124, 98, 98);
+} 
+.sinal-semana-atencao-maxima {
+    background-color: #ff8c00;
+    color: #ffffff;
+} 
+.sinal-semana-grave {
+    background-color: #ff0000;
+    color: #ffffff;
+} 
+.sinal-semana-altissimo-risco {
+    background-color: #9400d3;
+    color: #ffffff;
+}
+.exibe-graf{
+    float: right;
+}
+a.exibe-graf{
+    color: lightseagreen;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.pointer{
+    cursor: pointer;
+}
+.desc{
+    font-size: 10px;
+}
+.card-titulo {
+    float: left;
+    text-align: left;
+}
+.tb-classificacao{
+    width: 90%;
+    text-align: center;
+}
+.alerta {
+    background-color: #fefbd8;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 5px;
+    width: 20%;
+    color: rgb(124, 98, 98);
+} 
+.alerta-maximo {
+    background-color: #ffff00;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 5px;
+    width: 20%;
+    color: rgb(124, 98, 98);
+} 
+.atencao-maxima {
+    background-color: #ff8c00;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 5px;
+    width: 20%;
+    color: #ffffff;
+} 
+.grave {
+    background-color: #ff0000;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 5px;
+    width: 20%;
+    color: #ffffff;
+} 
+.altissimo-risco {
+    background-color: #9400d3;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 5px;
+    width: 20%;
+    color: #ffffff;
+}

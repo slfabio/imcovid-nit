@@ -1,0 +1,704 @@
+{
+    "atualizacao": "22/06/2020",
+    "estagio": {
+        "semana": "22/06/2020 a 28/06/2020",
+        "indice": 7.63,
+        "sinal": "Alerta Máximo",
+        "classe": {
+            "id": "alerta-maximo",
+            "nome": "Alerta Máximo",
+            "valores": "De 5,01 a 10" 
+        },
+        "classes": [
+            {
+                "id": "alerta",
+                "nome": "Alerta", 
+                "valores": "Até 5"
+            },
+            {
+                "id": "alerta-maximo",
+                "nome": "Alerta Máximo",
+                "valores": "De 5,01 a 10" 
+            },
+            {
+                "id": "atencao-maxima",
+                "nome": "Atenção Máxima",
+                "valores": "De 10,1 a 15"
+            },
+            {
+                "id": "grave",
+                "nome": "Grave",
+                "valores": "De 15,1 a 20"
+            },
+            {
+                "id": "altissimo-risco",
+                "nome": "Altíssimo Risco",
+                "valores": "Acima de 20"
+            }
+        ],
+        "serie": [
+            {
+                "dia": "05/06/2020",
+                "indice": 12.75,
+                "sinal": "Atenção Máxima"
+            },
+            {
+                "dia": "12/06/2020",
+                "indice": 10.25,
+                "sinal": "Atenção Máxima"
+            },
+            {
+                "dia": "19/06/2020",
+                "indice": 7.63,
+                "sinal": "Alerta Máximo"
+            }
+        ]
+    },
+    "medidas": [
+        {
+            "nome": "VELOCIDADE DO AVANÇO DA COVID",
+            "classes": [
+                {
+                    "id": "alerta",
+                    "nome": "Alerta", 
+                    "valores": "Até 1"
+                },
+                {
+                    "id": "alerta-maximo",
+                    "nome": "Alerta Máximo",
+                    "valores": "De 1,01 a 1,5" 
+                },
+                {
+                    "id": "atencao-maxima",
+                    "nome": "Atenção Máxima",
+                    "valores": "De 1,51 a 2,5"
+                },
+                {
+                    "id": "grave",
+                    "nome": "Grave",
+                    "valores": "De 2,51 a 3"
+                },
+                {
+                    "id": "altissimo-risco",
+                    "nome": "Altíssimo Risco",
+                    "valores": "Acima de 3"
+                }
+            ],
+            "indicadores": [
+                {
+                    "nome": "Taxa de crescimento de novos casos COVID-19",
+                    "peso": 0.5,
+                    "numerador": {
+                        "nome": "Casos confirmados nos últimos 7 dias",
+                        "fonte": "COVIG"
+                    },
+                    "denominador": {
+                        "nome": "Casos confirmados nos 7 dias anteriores",
+                        "fonte": "COVIG"
+                    },
+                    "serie": [
+                        {
+                            "dia": "05/06/2020",
+                            "numerador": 433,
+                            "denominador": 681,
+                            "indice": 0.64,
+                            "sinal": "Alerta"
+                        },
+                        {
+                            "dia": "12/06/2020",
+                            "numerador": 472,
+                            "denominador": 577,
+                            "indice": 0.82,
+                            "sinal": "Alerta"
+                        },
+                        {
+                            "dia": "19/06/2020",
+                            "numerador": 363,
+                            "denominador": 550,
+                            "indice": 0.66,
+                            "sinal": "Alerta"
+                        }
+                    ]
+                },
+                {
+                    "nome": "Taxa de Crescimento de Pacientes com COVID-19 Internados em Leitos Clínicos",
+                    "peso": 0.5,
+                    "numerador": {
+                        "nome": "Pacientes Internados com COVID-19 em leitos clínicos no último dia",
+                        "fonte": "VIPAHE / SINDHLESTE"
+                    },
+                    "denominador": {
+                        "nome": "Pacientes Internados com COVID-19 em leitos clínicos há sete dias atrás",
+                        "fonte": "VIPAHE / SINDHLESTE"
+                    },
+                    "serie": [
+                        {
+                            "dia": "05/06/2020",
+                            "numerador": 157,
+                            "denominador": 198,
+                            "indice": 0.79,
+                            "sinal": "Alerta"
+                        },
+                        {
+                            "dia": "12/06/2020",
+                            "numerador": 146,
+                            "denominador": 155,
+                            "indice": 0.94,
+                            "sinal": "Alerta"
+                        },
+                        {
+                            "dia": "19/06/2020",
+                            "numerador": 124,
+                            "denominador": 145,
+                            "indice": 0.86,
+                            "sinal": "Alerta"
+                        }
+                    ]
+                },
+                {
+                    "nome": "Taxa de Crescimento de Pacientes com COVID-19 Internados em UTI",
+                    "peso": 1,
+                    "numerador": {
+                        "nome": "Pacientes Internados com COVID-19 em UTI no último dia",
+                        "fonte": "VIPAHE / SINDHLESTE"
+                    },
+                    "denominador": {
+                        "nome": "Pacientes Internados com COVID-19 em UTI há sete dias atrás",
+                        "fonte": "VIPAHE / SINDHLESTE"
+                    },
+                    "serie": [
+                        {
+                            "dia": "05/06/2020",
+                            "numerador": 224,
+                            "denominador": 277,
+                            "indice": 0.81,
+                            "sinal": "Alerta"
+                        },
+                        {
+                            "dia": "12/06/2020",
+                            "numerador": 199,
+                            "denominador": 227,
+                            "indice": 0.88,
+                            "sinal": "Alerta"
+                        },
+                        {
+                            "dia": "19/06/2020",
+                            "numerador": 181,
+                            "denominador": 202,
+                            "indice": 0.9,
+                            "sinal": "Alerta"
+                        }
+                    ]
+                }
+            ]
+
+        },
+        {
+            "nome": "ESTÁGIO DE EVOLUÇÃO",
+            "classes": [
+                {
+                    "id": "alerta",
+                    "nome": "Alerta", 
+                    "valores": "Até 0,25"
+                },
+                {
+                    "id": "alerta-maximo",
+                    "nome": "Alerta Máximo",
+                    "valores": "De 0,26 a 0,5"
+                },
+                {
+                    "id": "atencao-maxima",
+                    "nome": "Atenção Máxima",
+                    "valores": "De 0,6 a 0,75"
+                },
+                {
+                    "id": "grave",
+                    "nome": "Grave",
+                    "valores": "De 0,76 a 1"
+                },
+                {
+                    "id": "altissimo-risco",
+                    "nome": "Altíssimo Risco",
+                    "valores": "Acima de 1"
+                }
+            ],
+            "indicadores": [
+                {
+                    "nome": "Taxa de casos ativos sobre total de recuperados",
+                    "peso": 1,
+                    "numerador": {
+                        "nome": "Casos ativos no último dia",
+                        "fonte": "COVIG"
+                    },
+                    "denominador": {
+                        "nome": "Casos recuperados nos últimos 50 dias",
+                        "fonte": "COVIG"
+                    },
+                    "serie": [
+                        {
+                            "dia": "05/06/2020",
+                            "numerador": 1571,
+                            "denominador": 1332,
+                            "indice": 1.18,
+                            "sinal": "Altíssimo Risco"
+                        },
+                        {
+                            "dia": "12/06/2020",
+                            "numerador": 1427,
+                            "denominador": 1389,
+                            "indice": 1.03,
+                            "sinal": "Altíssimo Risco"
+                        },
+                        {
+                            "dia": "19/06/2020",
+                            "numerador": 930,
+                            "denominador": 1649,
+                            "indice": 0.56,
+                            "sinal": "Atenção Máxima"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nome": "INCIDÊNCIA DE NOVOS CASOS",
+            "classes": [
+                {
+                    "id": "alerta",
+                    "nome": "Alerta", 
+                    "valores": "Até 4,99"
+                },
+                {
+                    "id": "alerta-maximo",
+                    "nome": "Alerta Máximo",
+                    "valores": "De 5 a 14,99"
+                },
+                {
+                    "id": "atencao-maxima",
+                    "nome": "Atenção Máxima",
+                    "valores": "De 15 a 24,99"
+                },
+                {
+                    "id": "grave",
+                    "nome": "Grave",
+                    "valores": "De 25 a 29,99"
+                },
+                {
+                    "id": "altissimo-risco",
+                    "nome": "Altíssimo Risco",
+                    "valores": "Acima de 29,99"
+                }
+            ],
+            "indicadores": [
+                {
+                    "nome": "Incidência de novos casos para cada 100mil habitantes",
+                    "peso": 1.25,
+                    "numerador": {
+                        "nome": "Casos confirmados nos últimos 7 dias",
+                        "fonte": "COVIG"
+                    },
+                    "denominador": {
+                        "nome": "500 mil / 100 mil",
+                        "fonte": "IBGE"
+                    },
+                    "serie": [
+                        {
+                            "dia": "05/06/2020",
+                            "numerador": 433,
+                            "denominador": 5,
+                            "indice": 86.6,
+                            "sinal": "Altíssimo Risco"
+                        },
+                        {
+                            "dia": "12/06/2020",
+                            "numerador": 472,
+                            "denominador": 5,
+                            "indice": 94.4,
+                            "sinal": "Altíssimo Risco"
+                        },
+                        {
+                            "dia": "19/06/2020",
+                            "numerador": 363,
+                            "denominador": 5,
+                            "indice": 72.6,
+                            "sinal": "Altíssimo Risco"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nome": "MORTALIDADE POR COVID",
+            "classes": [
+                {
+                    "id": "alerta",
+                    "nome": "Alerta", 
+                    "valores": "Até 2,49"
+                },
+                {
+                    "id": "alerta-maximo",
+                    "nome": "Alerta Máximo",
+                    "valores": "De 2,5 a 4,99"
+                },
+                {
+                    "id": "atencao-maxima",
+                    "nome": "Atenção Máxima",
+                    "valores": "De 5 a 7,49"
+                },
+                {
+                    "id": "grave",
+                    "nome": "Grave",
+                    "valores": "De 7,5 a 9,99"
+                },
+                {
+                    "id": "altissimo-risco",
+                    "nome": "Altíssimo Risco",
+                    "valores": "Acima de 9,99"
+                }
+            ],
+            "indicadores": [
+                {
+                    "nome": "Taxa de Mortalidade por COVID-19 para cada 100mil habitantes",
+                    "peso": 1.25,
+                    "numerador": {
+                        "nome": "Óbitos por COVID-19 nos últimos 7 dias",
+                        "fonte": "COVIG"
+                    },
+                    "denominador": {
+                        "nome": "500 mil / 100 mil",
+                        "fonte": "IBGE"
+                    },
+                    "serie": [
+                        {
+                            "dia": "05/06/2020",
+                            "numerador": 27,
+                            "denominador": 5,
+                            "indice": 5.4,
+                            "sinal": "Atenção Máxima"
+                        },
+                        {
+                            "dia": "12/06/2020",
+                            "numerador": 19,
+                            "denominador": 5,
+                            "indice": 3.8,
+                            "sinal": "Alerta Máximo"
+                        },
+                        {
+                            "dia": "19/06/2020",
+                            "numerador": 13,
+                            "denominador": 5,
+                            "indice": 2.6,
+                            "sinal": "Alerta Máximo"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nome": "MUDANÇA NA CAPACIDADE DE ATENDIMENTO",
+            "classes": [
+                {
+                    "id": "alerta",
+                    "nome": "Alerta", 
+                    "valores": "Acima de 24,9"
+                },
+                {
+                    "id": "alerta-maximo",
+                    "nome": "Alerta Máximo",
+                    "valores": "De 20 a 24,9"
+                },
+                {
+                    "id": "atencao-maxima",
+                    "nome": "Atenção Máxima",
+                    "valores": "De 15 a 19,9"
+                },
+                {
+                    "id": "grave",
+                    "nome": "Grave",
+                    "valores": "De 14,9 a 10"
+                },
+                {
+                    "id": "altissimo-risco",
+                    "nome": "Altíssimo Risco",
+                    "valores": "Até 9,99"
+                }
+            ],
+            "indicadores": [
+                {
+                    "nome": "Leitos clínicos SUS para pacientes com COVID-19 para cada 100mil habitantes",
+                    "peso": 0.75,
+                    "numerador": {
+                        "nome": "Leitos clínicos SUS para pacientes adultos com COVID-19",
+                        "fonte": "RESNIT"
+                    },
+                    "denominador": {
+                        "nome": "500 mil / 100 mil",
+                        "fonte": "IBGE"
+                    },
+                    "serie": [
+                        {
+                            "dia": "05/06/2020",
+                            "numerador": 47,
+                            "denominador": 5,
+                            "indice": 9.4,
+                            "sinal": "Altíssimo Risco"
+                        },
+                        {
+                            "dia": "12/06/2020",
+                            "numerador": 34,
+                            "denominador": 5,
+                            "indice": 6.8,
+                            "sinal": "Altíssimo Risco"
+                        },
+                        {
+                            "dia": "19/06/2020",
+                            "numerador": 87,
+                            "denominador": 5,
+                            "indice": 17.4,
+                            "sinal": "Atenção Máxima"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nome": "MUDANÇA NA CAPACIDADE DE ATENDIMENTO - UTI",
+            "classes": [
+                {
+                    "id": "alerta",
+                    "nome": "Alerta", 
+                    "valores": "Acima de 19,9"
+                },
+                {
+                    "id": "alerta-maximo",
+                    "nome": "Alerta Máximo",
+                    "valores": "De 15 a 19,9"
+                },
+                {
+                    "id": "atencao-maxima",
+                    "nome": "Atenção Máxima",
+                    "valores": "De 10 a 14,9"
+                },
+                {
+                    "id": "grave",
+                    "nome": "Grave",
+                    "valores": "De 6 a 9,9"
+                },
+                {
+                    "id": "altissimo-risco",
+                    "nome": "Altíssimo Risco",
+                    "valores": "Até 5,99"
+                }
+            ],
+            "indicadores": [
+                {
+                    "nome": "Leitos de UTI SUS para pacientes com COVID-19 para cada 100mil habitantes",
+                    "peso": 1.25,
+                    "numerador": {
+                        "nome": "Leitos de UTI SUS para pacientes adultos com COVID-19",
+                        "fonte": "RESNIT"
+                    },
+                    "denominador": {
+                        "nome": "500 mil / 100 mil",
+                        "fonte": "IBGE"
+                    },
+                    "serie": [
+                        {
+                            "dia": "05/06/2020",
+                            "numerador": 87,
+                            "denominador": 5,
+                            "indice": 17.4,
+                            "sinal": "Alerta Máximo"
+                        },
+                        {
+                            "dia": "12/06/2020",
+                            "numerador": 109,
+                            "denominador": 5,
+                            "indice": 21.8,
+                            "sinal": "Alerta"
+                        },
+                        {
+                            "dia": "19/06/2020",
+                            "numerador": 113,
+                            "denominador": 5,
+                            "indice": 22.6,
+                            "sinal": "Alerta"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nome": "CAPACIDADE DE ATENDIMENTO",
+            "classes": [
+                {
+                    "id": "alerta",
+                    "nome": "Alerta", 
+                    "valores": "Até 74,9%"
+                },
+                {
+                    "id": "alerta-maximo",
+                    "nome": "Alerta Máximo",
+                    "valores": "De 75% a 79,9"
+                },
+                {
+                    "id": "atencao-maxima",
+                    "nome": "Atenção Máxima",
+                    "valores": "De 80% a 85%"
+                },
+                {
+                    "id": "grave",
+                    "nome": "Grave",
+                    "valores": "De 85,1% a 90%"
+                },
+                {
+                    "id": "altissimo-risco",
+                    "nome": "Altíssimo Risco",
+                    "valores": "Acima de 90%"
+                }
+            ],
+            "indicadores": [
+                {
+                    "nome": "Taxa de ocupação de Leitos Clínicos SUS",
+                    "peso": 0.75,
+                    "numerador": {
+                        "nome": "Pacientes-dia (adultos) internados em leitos clínicos SUS com COVID-19, nos últimos 7 dias.",
+                        "fonte": "RESNIT"
+                    },
+                    "denominador": {
+                        "nome": "Leitos clínicos dia (adultos) SUS para COVID-19, nos últimos 7 dias.",
+                        "fonte": "RESNIT"
+                    },
+                    "serie": [
+                        {
+                            "dia": "05/06/2020",
+                            "numerador": 233,
+                            "denominador": 333,
+                            "indice": 0.7,
+                            "sinal": "Alerta"
+                        },
+                        {
+                            "dia": "12/06/2020",
+                            "numerador": 173,
+                            "denominador": 303,
+                            "indice": 0.57,
+                            "sinal": "Alerta"
+                        },
+                        {
+                            "dia": "19/06/2020",
+                            "numerador": 171,
+                            "denominador": 344,
+                            "indice": 0.497,
+                            "sinal": "Alerta"
+                        }
+                    ]
+                },
+                {
+                    "nome": "Taxa de ocupação de Leitos Clínicos Privados",
+                    "peso": 0.75,
+                    "numerador": {
+                        "nome": "Pacientes-dia (adultos) internados em leitos clínicos Privados com COVID-19, nos últimos 7 dias.",
+                        "fonte": "RESNIT"
+                    },
+                    "denominador": {
+                        "nome": "Leitos clínicos dia (adultos) Privados para COVID-19, nos últimos 7 dias.",
+                        "fonte": "RESNIT"
+                    },
+                    "serie": [
+                        {
+                            "dia": "05/06/2020",
+                            "numerador": 129,
+                            "denominador": 300,
+                            "indice": 0.43,
+                            "sinal": "Alerta"
+                        },
+                        {
+                            "dia": "12/06/2020",
+                            "numerador": 120,
+                            "denominador": 300,
+                            "indice": 0.4,
+                            "sinal": "Alerta"
+                        },
+                        {
+                            "dia": "19/06/2020",
+                            "numerador": 97,
+                            "denominador": 303,
+                            "indice": 0.32,
+                            "sinal": "Alerta"
+                        }
+                    ]
+                },
+                {
+                    "nome": "Taxa de ocupação de Leitos UTI SUS",
+                    "peso": 0.75,
+                    "numerador": {
+                        "nome": "Pacientes-dia (adultos) internados em leitos UTI SUS com COVID-19, nos últimos 7 dias.",
+                        "fonte": "RESNIT"
+                    },
+                    "denominador": {
+                        "nome": "Leitos UTI dia (adultos) SUS para COVID-19, nos últimos 7 dias.",
+                        "fonte": "RESNIT"
+                    },
+                    "serie": [
+                        {
+                            "dia": "05/06/2020",
+                            "numerador": 538,
+                            "denominador": 729,
+                            "indice": 0.74,
+                            "sinal": "Alerta"
+                        },
+                        {
+                            "dia": "12/06/2020",
+                            "numerador": 546,
+                            "denominador": 795,
+                            "indice": 0.69,
+                            "sinal": "Alerta"
+                        },
+                        {
+                            "dia": "19/06/2020",
+                            "numerador": 501,
+                            "denominador": 771,
+                            "indice": 0.65,
+                            "sinal": "Alerta"
+                        }
+                    ]
+                },
+                {
+                    "nome": "Taxa de ocupação de Leitos UTI Privados",
+                    "peso": 0.75,
+                    "numerador": {
+                        "nome": "Pacientes-dia (adultos) internados em leitos UTI Privados com COVID-19, nos últimos 7 dias.",
+                        "fonte": "RESNIT"
+                    },
+                    "denominador": {
+                        "nome": "Leitos UTI dia (adultos) Privados para COVID-19, nos últimos 7 dias.",
+                        "fonte": "RESNIT"
+                    },
+                    "serie": [
+                        {
+                            "dia": "05/06/2020",
+                            "numerador": 143,
+                            "denominador": 280,
+                            "indice": 0.51,
+                            "sinal": "Alerta"
+                        },
+                        {
+                            "dia": "12/06/2020",
+                            "numerador": 125,
+                            "denominador": 278,
+                            "indice": 0.45,
+                            "sinal": "Alerta"
+                        },
+                        {
+                            "dia": "19/06/2020",
+                            "numerador": 109,
+                            "denominador": 278,
+                            "indice": 0.392,
+                            "sinal": "Alerta"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

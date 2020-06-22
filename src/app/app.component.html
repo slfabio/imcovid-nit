@@ -1,0 +1,153 @@
+<div class="container" style="text-align:center">
+  <nav class="navbar navbar-dark bg-info">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link {{ inicio }}" href="#" (click)="acessar('inicio')">Início</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {{ graficos }}" href="#" (click)="acessar('graficos')">Indicadores</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {{ dados }}" href="#" (click)="acessar('dados')">Dados</a>
+      </li>
+    </ul>  
+    <b class="bg-info" style="color:#ffffff;">{{ title }}</b>
+  </nav>
+  <div class="atualizacao">
+    <span>Atualizado em {{ dtAtualizacao }}</span> 
+    <span>Contato: niteroi.monitoramento@gmail.com</span>
+  </div>
+  <div class="apresentacao">
+    Esse site <u>não é da prefeitura</u>, é um site independente que disponibiliza a evolução dos indicadores 
+    divulgados pela Fundação Municipal de Saúde de Niterói.
+  </div>
+  <!----------------------------------  PAGINA INICIO ---------------------------------->
+  <div *ngIf="inicio" class="conteudo">
+    <h3><span class="badge badge-pill badge-info">Sinal da Semana</span></h3>
+    <div class="card">
+      <div class="card-header card-titulo">
+        <span>
+          <div>Estágio da Semana: {{ estagio.indice }}</div>
+        </span>
+        <table class="tb-classificacao">
+          <tr>
+            <td *ngFor="let classe of estagio.classes" class="{{ classe.id }}">{{ classe.nome }}: {{ classe.valores }}</td>
+          </tr>
+        </table>
+      </div>
+      <div *ngIf="true">
+        <div class="row">
+          <div class="col">
+            <div class="card sinal-semana sinal-semana-{{ estagio.classe.id }}">
+              <h1>{{ estagio.sinal }}</h1>
+              De {{estagio.semana}}
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <span class="badge badge-info"> Estágio da Semana </span>
+              <ngx-charts-bar-vertical class="card-img-top"
+                [view]="view"
+                [scheme]="colorScheme"
+                [results]="estagio.graficoIndice"
+                [customColors]="estagio.corSinal"
+                [xAxis]="showXAxis"
+                [yAxis]="showYAxis">
+              </ngx-charts-bar-vertical>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <!----------------------------------  PAGINA GRAFICOS ---------------------------------->
+  <div *ngIf="graficos" class="conteudo">
+    <h3><span class="badge badge-pill badge-info">Indicadores</span></h3>
+    <div class="exibe-graf"> 
+      <a class="exibe-graf" href="#" (click)="expandir(false)">- Diminuir</a>
+      <a class="exibe-graf" href="#" (click)="expandir(true)">+ Expandir</a>
+    </div>
+    <br>
+    <div *ngFor="let medida of medidas" class="card">
+      <div class="card-header card-titulo pointer" (click)="exibirGraficos(medida)">
+        <span>{{ medida.nome }}</span>
+        <table class="tb-classificacao">
+          <tr>
+            <td *ngFor="let classe of medida.classes" class="{{ classe.id }}">{{ classe.nome }}: {{ classe.valores }}</td>
+          </tr>
+        </table>
+      </div>
+      <div *ngIf="exibeGraficos(medida.id)">
+        <div class="row" *ngFor="let indicador of medida.indicadores">
+          <div class="col">
+            <div class="card">
+              <span class="badge badge-info"> {{ indicador.nome }} </span>
+              <ngx-charts-bar-vertical *ngIf="!medida.graficoPercentual" class="card-img-top"
+                [view]="view"
+                [scheme]="colorScheme"
+                [customColors]="indicador.corSinal"
+                [results]="indicador.graficoIndice"
+                [gradient]="gradient"
+                [xAxis]="showXAxis"
+                [yAxis]="showYAxis"
+                [legend]="showLegend"
+                [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel"
+                [xAxisLabel]="xAxisLabel"
+                [yAxisLabel]="yAxisLabel"
+                (select)="onSelect($event)">
+              </ngx-charts-bar-vertical>
+              <ngx-charts-bar-vertical-normalized *ngIf="medida.graficoPercentual" class="card-img-top"
+                [view]="view"
+                [scheme]="colorScheme"
+                [customColors]="indicador.corSinal"
+                [results]="indicador.graficoIndice"
+                [gradient]="gradient"
+                [xAxis]="showXAxis"
+                [yAxis]="showYAxis"
+                [legend]="showLegend"
+                [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel"
+                [xAxisLabel]="xAxisLabel"
+                [yAxisLabel]="yAxisLabel"
+                (select)="onSelect($event)">
+              </ngx-charts-bar-vertical-normalized>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <span class="badge badge-info"> {{ indicador.numerador.nome }} </span>
+              <ngx-charts-bar-vertical class="card-img-top"
+                [view]="view"
+                [scheme]="colorScheme"
+                [customColors]="indicador.corSinal"
+                [results]="indicador.graficoNumerador"
+                [gradient]="gradient"
+                [xAxis]="showXAxis"
+                [yAxis]="showYAxis"
+                [legend]="showLegend"
+                [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel"
+                [xAxisLabel]="xAxisLabel"
+                [yAxisLabel]="yAxisLabel"
+                (select)="onSelect($event)">
+              </ngx-charts-bar-vertical>
+            </div>
+            <br>
+          </div> 
+        </div> <!--indicador-->
+      </div> <!--exibe grafico-->
+    </div> <!--Medida-->
+  </div> <!-- grafico -->
+
+  <!----------------------------------  PAGINA GRAFICOS ---------------------------------->
+  <div *ngIf="dados" class="conteudo">
+    <h3><span class="badge badge-pill badge-info">Dados</span></h3>
+    <a href="/assets/dados/200605.pdf">Boletim 05/06/2020</a><br/>
+    <a href="/assets/dados/200605.pdf">Boletim 12/06/2020</a><br/>
+    <a href="/assets/dados/200605.pdf">Boletim 19/06/2020</a><br/>
+    <a href="/assets/dados/dados.json">Boletins consolidados (Formato JSON)</a>
+  </div>
+</div> <!-- container-->
+<router-outlet></router-outlet>
